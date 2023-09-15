@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <title>3D contact form</title>
+        <meta name="description" content="A contact form with some fancy 3D effects" />
+        <meta name="keywords" content="css3, transforms, transitions, contact form, 3d" />
+        <meta name="author" content="PeHaa for PEPSized" />
+		<script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		
+        <!--[if IE 8]>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+			<script>	
+				$(document).ready(function(){
+					$("#contact").addClass("target");
+					$("#flip2back, #close").click(function(e){
+						$(".target").removeClass("target");
+						e.preventDefault();
+					});
+					$("#open, #flip").click(function(e){
+						var $anchor = $(this);
+            			$($anchor.attr('href')).addClass("target");
+						e.preventDefault();
+					});
+				});
+			</script>
+        <![endif]-->
+	
+<link rel="stylesheet" href="stylesheets/style.css">
+<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<section class="container" id="contact" >
+		<form class="flip">
+			<div class="front">
+				<h2>Por mi companera di vita</h2>
+				<a id="flip2back">Abrir letter!</a>
+			</div>
+			<div id="content" class="back">
+				<div id="letter">
+					<div class="container">
+						<div class="flip">
+			  				<div class="front"></div>
+			  				<div class="back">
+								<p>Querida vida mía, <br>
+									Gracias por cada momento que pasamos y saboreamos juntos, con tu dulzura que hace que mi corazón lata más rápido y me llena de felicidad y energía infinita como si pudiera tocar el cielo con un dedo, quiero estar aquí y abrazarte fuerte. mis brazos, brazos y protegerte con todo mi ser y darte todo el amor que mi corazón tiene para ofrecerte, porque en cada momento eres mi compañero de vida más precioso que cualquier metal raro presente en la tierra y en el universo. Gracias por cada cosa que has hecho por mí, que haces en cada momento y que harás, cada simple gesto tuyo que me hace sentir bien y feliz. cada momento contigo es increíble e inolvidable y me encanta afrontar cada obstáculo que la vida nos pone lo mejor que podemos sin rendirnos jamás, porque juntos estamos unidos y con la capacidad de afrontarlo todo y tú me enseñas esto todos los días. , atesorando dentro de mí todo lo que me enseñas y todo el amor que me das. Gracias a tus dulces besos que son mi oxígeno que me hacen vivir y que hacen latir mi corazón junto con tu dulce sonrisa que ilumina mis días y me encanta estar aquí para hacerte sonreír porque cada día te mereces única y exclusivamente todas las cosas bonitas. de todo el universo! Gracias por cada uno de tus abrazos que, como una barrera, me hacen sentir a salvo de todo mal y me hacen dormir como un niño, mientras escucho tu dulce y gentil voz aún después de un día completo me haces relajar. y me siento cada vez en un universo infinito donde eres la estrella más preciosa y brillante que ilumina mi camino y me guía hacia tu corazón, con nuestras almas que se unen para ser juntas una sola cosa. Quiero estar aquí a tu lado todos los días y pondré todo de mí en cada momento para protegerte en mis brazos porque mereces todo el bien del mundo en cada momento. Te deseo mi vida un buen 1 año y 11 meses juntos y estoy súper feliz de estar aquí a tu lado todos los días de mi vida y estoy orgulloso de ti porque en cada momento para mí eres el número uno en todo el universo. Te amo inmensamente desde el fondo de mi corazón que cada día late sólo y sólo por ti y existe para acoger tu alma. Te amo infinitamente desde lo más profundo de mi mente donde cada día y cada noche eres mi más hermoso pensamiento y sueño que quiero tener por el resto de mi vida sin volver a abrir los ojos! Te amo ilimitadamente, en cuerpo y alma, tú que eres mi oxígeno, mi vida, mi reina, la estrella más bella y única del universo entero, cada molécula que compone mi alma y mi cuerpo, mi todo!!! ¡Te amo desde el fondo de mi corazón, tú que eres mi compañero de vida todos los días y te agradezco desde el fondo de mi corazón por todas las cosas extraordinarias que haces por mí! ¡FELIZ 1 AÑO Y 11 MESES JUNTOS AMOR DE MI VIDA! A+G+GIOAN = HOY, SIEMPRE Y MÁS ALLÁ!!</p>
+								  
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div id="top">
+					
+				</div>
+				<div id="lid" class="container">
+  					<div class="flip">    
+  						<div class="front">
+							<div>
+								<label for="name">Your name :</label>
+								<input type="text"  id="name" name="name">
+							</div>
+							<div>
+								<label for="mail">Your email :</label>
+								<input type="text" id="mail" name="mail" >
+							</div>
+							<a id="open" href="#content">Open</a>
+						</div>
+						<div class="back"></div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+
+
+	<script>
+		let opencmd1 = document.getElementById('flip2back');
+		let opencmd2 = document.getElementById('open');
+		let top1 = document.getElementById('top');
+		let lid1 = document.getElementById('lid');
+
+		function open(){
+			location.href = 'post.html#content'
+			
+			
+			setTimeout(function() {
+				top1.setAttribute('style','display:none');
+				lid1.setAttribute('style','display:none');
+				// Seleziona l'elemento con la classe "back"
+				var backElement = document.querySelector('section.container > form.flip > .back');
+
+				// Rimuovi la regola CSS del background
+				backElement.style.background = 'none';
+				backElement.style.boxShadow = 'none';
+
+
+			}, 2000);
+
+    	}
+
+		opencmd1.addEventListener('click', (event) => {
+    
+		   open();
+  
+
+		})
+	</script>
+
+</body>
+</html>
+
